@@ -1,0 +1,4 @@
+dependencies {
+    implementation libs.eurekaServer
+    implementation libs.springCloudConfig
+}

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: registry
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  cloud:
+    config:
+      name: registry-application

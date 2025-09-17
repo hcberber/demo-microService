@@ -1,0 +1,5 @@
+rootProject.name = 'demo'
+include 'api-gateway'
+include 'auth'
+include 'config-server'
+include 'registry'

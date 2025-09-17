@@ -1,0 +1,5 @@
+dependencies {
+    implementation libs.springCloudStarterOpenFeign
+    implementation libs.springCloudConfig
+    implementation libs.eurekaClient
+}
