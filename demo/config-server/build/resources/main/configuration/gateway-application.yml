@@ -4,26 +4,34 @@ server:
 spring:
   main:
     web-application-type: servlet
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8082/.well-known/jwks.json
+
   cloud:
     gateway:
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-      globalcors:
-        add-to-simple-url-handler-mapping: true
-        cors-configurations:
-          '[/**]':
-
-            allowedOriginPatterns: "*"
-            allowedHeaders: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-              - OPTIONS
+      server:
+        webmvc:
+          routes:
+            - id: auth
+              uri: http://localhost:8082
+              predicates:
+                - Path=/auth/**
+            - id: jwks
+              uri: http://localhost:8082
+              predicates:
+                - Path=/.well-known/**
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8084/eureka/
+
+logging:
+  level:
+    org.springframework.cloud.gateway.server.webmvc: DEBUG
+

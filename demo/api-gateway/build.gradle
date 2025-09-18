@@ -2,4 +2,7 @@ dependencies {
     implementation libs.springCloudStarterOpenFeign
     implementation libs.springCloudConfig
     implementation libs.eurekaClient
+    implementation libs.springBootStarterSecurity
+    implementation libs.springBootOAuth2ResourceServer
+    implementation libs.springCloudStarterGatewayMvc
 }

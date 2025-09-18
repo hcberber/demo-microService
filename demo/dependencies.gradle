@@ -1,27 +1,32 @@
 ext {
     versions = [
-            springBoot      : '3.5.5',
-            springCloud     : '4.3.0',
-            postgreSQL      : '42.7.7',
-            lombok          : '1.18.40',
-            swagger         : '2.8.13',
-            gatewayServerMvc: '6.2.11'
+            springBoot        : '3.5.5',
+            springCloud       : '4.3.0',
+            postgreSQL        : '42.7.7',
+            lombok            : '1.18.40',
+            swagger           : '2.8.13',
+            gatewayServerMvc  : '4.3.1',
+            springOAuth2Jose  : "6.5.4",
+            springOAuth2Server: "1.5.2"
     ]
 
     libs = [
-            springBootStarterWeb        : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
-            springBootDataJpa           : "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
-            springBootDataRedis         : "org.springframework.boot:spring-boot-starter-data-redis:${versions.springBoot}",
-            springCloudStarterOpenFeign : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
-            springCloudConfig           : "org.springframework.cloud:spring-cloud-starter-config:${versions.springCloud}",
-            springCloudConfigServer     : "org.springframework.cloud:spring-cloud-config-server:${versions.springCloud}",
-            springBootDataMongo         : "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBoot}",
-            postgreSQL                  : "org.postgresql:postgresql:${versions.postgreSQL}",
-            lombok                      : "org.projectlombok:lombok:${versions.lombok}",
-            swaggerui                   : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.swagger}",
-            springCloudStarterGatewayMvc: "org.springframework.cloud:spring-cloud-starter-gateway-server-webmvc:${versions.gatewayServerMvc}",
-            eurekaClient                : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${versions.springCloud}",
-            eurekaServer                : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:${versions.springCloud}",
-            springBootStarterSecurity   : "org.springframework.boot:spring-boot-starter-security:${versions.springBoot}"
+            springBootStarterWeb          : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
+            springBootDataJpa             : "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
+            springBootDataRedis           : "org.springframework.boot:spring-boot-starter-data-redis:${versions.springBoot}",
+            springCloudStarterOpenFeign   : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
+            springCloudConfig             : "org.springframework.cloud:spring-cloud-starter-config:${versions.springCloud}",
+            springCloudConfigServer       : "org.springframework.cloud:spring-cloud-config-server:${versions.springCloud}",
+            springBootDataMongo           : "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBoot}",
+            postgreSQL                    : "org.postgresql:postgresql:${versions.postgreSQL}",
+            lombok                        : "org.projectlombok:lombok:${versions.lombok}",
+            swaggerui                     : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.swagger}",
+            springCloudStarterGatewayMvc  : "org.springframework.cloud:spring-cloud-starter-gateway-server-webmvc:${versions.gatewayServerMvc}",
+            eurekaClient                  : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${versions.springCloud}",
+            eurekaServer                  : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:${versions.springCloud}",
+            springBootStarterSecurity     : "org.springframework.boot:spring-boot-starter-security:${versions.springBoot}",
+            springSecurityOAuth2Jose      : "org.springframework.security:spring-security-oauth2-jose:${versions.springOAuth2Jose}",
+            springSecurityOAuth2Server    : "org.springframework.security:spring-security-oauth2-authorization-server:${versions.springOAuth2Server}",
+            springBootOAuth2ResourceServer: "org.springframework.boot:spring-boot-starter-oauth2-resource-server:${versions.springBoot}"
     ]
 }
