@@ -8,4 +8,5 @@ dependencies {
     implementation libs.springBootStarterSecurity
     implementation libs.springSecurityOAuth2Jose
     implementation libs.springSecurityOAuth2Server
+    implementation project(':commons')
 }

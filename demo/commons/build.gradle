@@ -1,0 +1,5 @@
+dependencies {
+    compileOnly libs.springBootStarterWeb
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}

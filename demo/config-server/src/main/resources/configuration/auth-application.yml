@@ -12,6 +12,9 @@ spring:
       ddl-auto: update
     properties:
       hibernate.jdbc.time_zone: UTC
+  mvc:
+    problemdetails:
+      enabled: false
 eureka:
   client:
     register-with-eureka: true
